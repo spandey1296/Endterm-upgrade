@@ -10,6 +10,11 @@
 	<link href="/static/css/style.css" rel="stylesheet" type="text/css"  />
 
 </head>
+<style>
+	body{
+		background-color: aquamarine;
+	}
+</style>
 <body>
 	<br>
 	<br>
@@ -17,7 +22,7 @@
 	<div class="container">
 <p th:if="${msg}" th:text="${msg}"></p>
 		<div class="col-lg-8 m-auto d-block">
-			<h3>Crud Process Using spring boot</h3>
+			<h3 style="text-decoration-color: yellowgreen">User Registration Form </h3>
 			<form th:action="@{/save}" th:object="${user}" method="POST"
 				class="bg-light">
 				<div class="form-grp">
@@ -32,7 +37,7 @@
 
 				<div class="form-grp">
 					<label class="label">Email</label> <input type="text" th:field="*{email}"
-						placeholder="Email" class="form-control" required />
+						placeholder="Email"  pattern=".+@gmail.com" maxlength="20" class="form-control" required />
 				</div>
 
 
@@ -44,7 +49,7 @@
 
 				<div class="form-grp">
 					<label class="label">contact</label> <input type="text" th:field="*{contact}"
-						placeholder="Enter your contact" class="form-control" required th:maxlength="10" />
+						placeholder="Enter your contact" pattern="^\d{10}$" class="form-control" required th:maxlength="10" />
 				</div>
 
 
@@ -61,6 +66,12 @@
 		</div>
 
 	</div>
+<footer>
+	<marquee width="100%" direction="left" height="100px">
+		Thanks to upgrad for providing such an amazing project that boasts my skills and experience in Springboot project
+	</marquee>
+
+</footer>
 </body>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>

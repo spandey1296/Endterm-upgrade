@@ -11,8 +11,7 @@
 <div id="main">
 	<div class="container">
 		<form th:action="@{/find}" id="add-user">
-			<input type="text" name="keyword"
-				   placeholder="Enter Name" class="form-control" required />
+			<input type="text" name="keyword" placeholder="Enter Name" style="text-decoration-color: brown" class="form-control" required />
 		</form>
 	</div>
 </div>
@@ -65,16 +64,10 @@
 						<span class="text-gradient"><i class="fas fa-times"></i></span>
 					</a></td>
 			</tr>
-
-
-
-
-
-
 		</tbody>
 	</table>
 
-<a class="btn btn-info" th:href="index.html">Go Back to Home Page</a>
+<a class="btn btn-info" th:href="@{/}">Go Back to Home Page</a>
 
 
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
